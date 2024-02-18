@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=Shift_JIS" />
+<meta name="referrer" content="unsafe-url">
+<title>メールボックス - 碧落</title>
+<meta http-equiv="cache-control" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="author" content="メールボックス - 碧落">
+<link rel="canonical" href="https://alicex.jp/hekiraku/mailbox.php">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex,noarchive,nofollow,noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://alicex.jp/data/hekiraku/pc_css.css" />
+</head>
+<body>
+
+
+<div class="Wrapper">
+
+
+<hr size="1" width="100%">
+<center><h1><img src="https://alicex.jp/data/hekiraku/img/hekiraku_upld_2.png">C<span>o</span>nt<span>a</span>cts</h1><br>
+こちらのコメントへの返信はMemoにて行います。<br>
+返信不要の場合はその旨を記述の上、送信お願いします。<br>
+誤字脱字報告、作品への感想、次世代への質問・リクエスト、その他応援などいただけると活動の励みになります。<br>
+
+</center>
+<hr size="1" width="100%">
+
+
+
+<form method="post" action="mailbox.php?guid=on"><input type="hidden" name="id" value="hekiraku" />
+<center>
+タイトル：<br>
+<input type="text" name="title" size="" value=""><br>
+<br>
+<br>
+メッセージ<br>
+<textarea name="message" rows="10" cols="50"></textarea><br>
+<p></p>
+<input type="submit" name="confirm" value="送信" onclick="input_token();"></center>
+
+
+
+<input type="hidden" name="token" value="" id="token" />
+</form>
+
+<hr size="1" width="100%">
+<p style="text-align: right"><a href="https://alicex.jp/hekiraku/">Top</a></p>
+<hr size="1" width="100%">
+
+
+
+<script type="text/javascript">
+  function input_token () {
+      var now   = new Date();
+      var year  = now.getFullYear();
+      var month = now.getMonth() + 1;
+      var day   = now.getDate();
+      var token = year + '-' + month + '-' +  day;
+      document.getElementById('token').value = token;
+  }
+</script>
+<footer style="text-align:center;"><a href="https://alicex.jp/hekiraku/" style="font-size:14px!important;">碧落</a></footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99848175-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99848175-1');
+</script>
+
+</body>
+</html>
