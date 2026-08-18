@@ -1,82 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta http-equiv="content-Type" content="text/html; charset=Shift_JIS" />
-<meta name="referrer" content="unsafe-url">
-<title>メールボックス - 碧落</title>
-<meta http-equiv="cache-control" content="no-cache">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
-<meta name="author" content="メールボックス - 碧落">
-<link rel="canonical" href="https://alicex.jp/hekiraku/mailbox.php">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="robots" content="noindex,noarchive,nofollow,noimageindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacts - 碧落</title>
+
+<meta name="referrer" content="unsafe-url">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="author" content="碧落">
+
 <link rel="stylesheet" href="style.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="https://alicex.jp/data/hekiraku/pc_css.css" />
 </head>
+
 <body>
 
+<!-- ▼全体の囲み▼ -->
+<div id="wrapper">
 
-<div class="Wrapper">
+<!-- ▼ヘッダ▼ -->
+<header>
 
+<h1>
+<a href="index.html">
+<img src="image/icon02.png" alt="">碧落
+</a>
+</h1>
 
-<hr size="1" width="100%">
-<center><h1><img src="https://alicex.jp/data/hekiraku/img/hekiraku_upld_2.png">C<span>o</span>nt<span>a</span>cts</h1><br>
-こちらのコメントへの返信はMemoにて行います。<br>
-返信不要の場合はその旨を記述の上、送信お願いします。<br>
-誤字脱字報告、作品への感想、次世代への質問・リクエスト、その他応援などいただけると活動の励みになります。<br>
-
-</center>
-<hr size="1" width="100%">
-
-
-
-<form method="post" action="mailbox.php?guid=on"><input type="hidden" name="id" value="hekiraku" />
-<center>
-タイトル：<br>
-<input type="text" name="title" size="" value=""><br>
-<br>
-<br>
-メッセージ<br>
-<textarea name="message" rows="10" cols="50"></textarea><br>
-<p></p>
-<input type="submit" name="confirm" value="送信" onclick="input_token();"></center>
+</header>
+<!-- ▲ヘッダ▲ -->
 
 
-
-<input type="hidden" name="token" value="" id="token" />
-</form>
-
-<hr size="1" width="100%">
-<p style="text-align: right"><a href="https://alicex.jp/hekiraku/">Top</a></p>
-<hr size="1" width="100%">
+<!-- ▼メイン▼ -->
+<div id="contents" class="cf">
 
 
+<!-- ▼左側▼ -->
+<div id="leftcolumn">
+<div id="leftcolumn-inner">
 
-<script type="text/javascript">
-  function input_token () {
-      var now   = new Date();
-      var year  = now.getFullYear();
-      var month = now.getMonth() + 1;
-      var day   = now.getDate();
-      var token = year + '-' + month + '-' +  day;
-      document.getElementById('token').value = token;
-  }
-</script>
-<footer style="text-align:center;"><a href="https://alicex.jp/hekiraku/" style="font-size:14px!important;">碧落</a></footer>
+<!-- ▼メニュー▼ -->
+<div id="menu">
+<nav>
+<ul>
+
+<li><a href="index.html">Top</a></li>
+<li><a href="info.html">Info</a></li>
+<li><a href="shelf.html">Shelf</a></li>
+<li><a href="https://sizu.me/katakurikooo">Log</a></li>
+<li><a href="contact.html">Contacts</a></li>
+
+</ul>
+</nav>
 </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99848175-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!-- ▲メニュー▲ -->
 
-  gtag('config', 'UA-99848175-1');
-</script>
+
+<!-- ▼600px以下で隠れる部分を開くボタン▼ -->
+<div id="open">
+<span id="open-icon"></span>
+<span class="open-text">More...</span>
+</div>
+<!-- ▲600px以下で隠れる部分を開くボタン▲ -->
+
+
+<!-- ▼600px以下で隠れる部分▼ -->
+<div id="side-bg"></div>
+
+<div id="side">
+<div id="side-inner">
+</div>
+</div>
+
+<!-- ▲600px以下で隠れる部分▲ -->
+
+</div>
+</div>
+<!-- ▲左側▲ -->
+
+
+<!-- ▼右側▼ -->
+<div id="rightcolumn">
+<div id="rightcolumn-inner">
+
+
+<!-- ▼Contacts▼ -->
+<h2>C<span>o</span>nt<span>a</span>cts</h2>
+
+<div class="rahm01">
+
+<div class="dcline">
+Message
+</div>
+
+ご訪問ありがとうございます。<br>
+こちらからメッセージを送ることができます。<br>
+誤字脱字報告、作品への感想、次世代への質問・リクエスト、
+その他応援などいただけると活動の励みになります。<br>
+
+<br>
+
+返信が必要な場合は、その旨を添えていただけると幸いです。<br>
+返信はMemoにて行います。
+
+<br><br>
+
+<a href="https://odaibako.net/u/katakuruten" target="_blank">
+→ お題箱はこちら
+</a>
+
+</div>
+
+
+<!-- ▼Topへのリンク▼ -->
+<p style="text-align: right">
+<a href="index.html">Top</a>
+</p>
+
+
+</div>
+</div>
+<!-- ▲右側▲ -->
+
+</div>
+<!-- ▲メイン▲ -->
+
+
+<!-- ▼フッタ▼ -->
+<footer>
+<a href="https://foollovers.com/" target="_blank">designed</a>
+</footer>
+<!-- ▲フッタ▲ -->
+
+</div>
+<!-- ▲全体の囲み▲ -->
+
+
+<!-- ページトップに戻る -->
+<a href="#" id="pagetop">top</a>
+
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.scroll.js"></script>
+<script src="js/jquery.toggle.js"></script>
 
 </body>
 </html>
