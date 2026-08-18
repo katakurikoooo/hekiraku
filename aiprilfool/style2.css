@@ -1,0 +1,132 @@
+
+
+/* ---------- BACE ----------*/
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+*::before, *::after{
+position:absolute;
+content:'';
+}
+
+body{
+text-align: justify;
+letter-spacing: 0.08em;
+line-height: 1.8;
+font-family: 'Noto Serif JP', serif;
+color: #fff;
+}
+
+input[type], button, select, textarea {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background: transparent;
+border: none;
+border-radius: 0;
+font: inherit;
+outline: none;
+box-shadow: none;
+}
+
+#wrap{overflow: hidden;}
+
+/* ------- BACE - END -------*/
+
+
+/* ---------- COLOR ---------- */
+
+body{
+color: #fff;
+background-color: #1c1d1f;}
+
+a{color: #22BBFF;}
+
+h1 a{color: #fff;}
+
+input[type], textarea{
+color: #fff;
+background-color: #535353;}
+
+input[type=submit]{
+color: #fff;
+background-color: #1c1d1f;}
+
+/* ---------- COLOR - END ---------- */
+
+
+/* ---------- FONT SIZE ---------- */
+
+body{font-size: 12px;}
+input[type], textarea{font-size: 11px;}
+
+/* ------- FONT SIZE - END ------- */
+
+
+/* -------- CONTENT -------- */
+main{
+max-width: 600px;
+padding: 30px 30px 10px;
+margin: 0 auto;
+}
+
+h1 a{text-decoration: none;}
+
+.item{
+border-bottom: solid 2px #535353;
+padding: 10px 5px 20px;
+margin-bottom: 20px;
+}
+
+.item p{
+padding: 10px 10px 0;
+}
+
+/* ----- CONTENT - END ----- */
+
+
+/* ---------- FORM ---------- */
+form{
+font-family: 'Noto Serif JP',serif;}
+
+input[type=submit]{
+display: block;
+border-radius: 3px;
+font-weight: bold;
+padding: 0.5em 2.5em;
+margin: 0 auto 10px;
+cursor: pointer;
+}
+
+input[type=text], textarea{
+border-radius: 3px;
+padding: 0.5em;
+}
+
+textarea{height: 7em;}
+
+#mail_form{
+width: 300px;
+margin: 0 auto;
+}
+
+#mail_form input[type],
+#mail_form textarea{
+display: block;
+margin: 0 auto;
+}
+
+#name_change input[type]{
+display: inline-block;
+width: 8em;
+text-align: center;
+margin: 0 5px;
+}
+
+/* ------- FORM - END -------  */
+
+</style>
