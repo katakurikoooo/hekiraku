@@ -183,3 +183,14 @@ h2:before {
     }
 
 }
+
+
+/* メニュー */
+.menu {
+    margin: 1em auto 1.5em;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
