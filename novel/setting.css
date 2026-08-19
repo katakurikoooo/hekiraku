@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+/* Setting page CSS */
+
+/* ウェブフォント */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+
+/* 源暎こぶり明朝 */
+@font-face {
+    font-family: '源暎こぶり明朝';
+    font-display: swap;
+    src: url('ここに源暎こぶり明朝のwoff2') format("woff2");
+}
+
+
+/*-------------------------------------------------
+  全体
+-------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+
+body {
+    background: #fff;
+    color: #666;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    line-height: 2.0;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-------------------------------------------------
+  リンク
+-------------------------------------------------*/
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #69c5c5;
+}
+
+
+/*-------------------------------------------------
+  ヘッダー
+-------------------------------------------------*/
+
+header {
+    margin: 0 auto;
+    padding: 5em 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* タイトル */
+
+header h1 {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.5em;
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: thin solid #fff;
+
+    font-family: '源暎こぶり明朝', serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    line-height: 2;
+}
+
+
+/* タイトルの背景 */
+
+header h1::before {
+    position: absolute;
+    display: block;
+    content: '';
+
+    top: 5%;
+    left: 5%;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* タイトル文字 */
+
+header h1 span {
+    position: relative;
+    z-index: 1;
+
+    font-family: '源暎こぶり明朝', serif;
+
+    animation: FadeIn 5s;
+}
+
+
+/* 補足 */
+
+header aside {
+    margin: 3em auto 0;
+    max-width: 500px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+header aside p {
+    color: #e8f5f5;
+}
+
+
+/*-------------------------------------------------
+  メイン
+-------------------------------------------------*/
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+/*-------------------------------------------------
+  セクション
+-------------------------------------------------*/
+
+section {
+    margin: 70px auto;
+    padding: 0;
+    text-align: left;
+}
+
+
+/* セクション見出し */
+
+section h2 {
+    margin: 0 0 30px;
+    padding-bottom: 8px;
+
+    border-bottom: 3px solid #69c5c5;
+
+    color: #666;
+
+    font-family: '源暎こぶり明朝', serif;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+}
+
+
+/* セクション説明 */
+
+section > p {
+    margin: 0 0 35px;
+    padding: 0 5px;
+}
+
+
+/*-------------------------------------------------
+  キャラクター
+-------------------------------------------------*/
+
+.character {
+    margin: 0 0 45px;
+    padding: 0 5px 35px;
+
+    border-bottom: 1px solid #e5eeee;
+}
+
+
+/* 最後のキャラクターには線を付けない */
+
+.character:last-child {
+    border-bottom: none;
+}
+
+
+/* キャラクター名 */
+
+.character h3 {
+    margin: 0 0 12px;
+
+    color: #555;
+
+    font-family: '源暎こぶり明朝', serif;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+}
+
+
+/* キャラクター情報 */
+
+.character p {
+    margin: 0 0 12px;
+}
+
+
+/* 種族・所属など */
+
+.character strong {
+    color: #69a5a5;
+    font-weight: normal;
+}
+
+
+/*-------------------------------------------------
+  台詞
+-------------------------------------------------*/
+
+.character blockquote {
+    position: relative;
+
+    margin: 20px 0 0;
+    padding: 15px 25px;
+
+    border-left: 3px solid #69c5c5;
+
+    color: #666;
+    background-color: #f5fafa;
+}
+
+
+/*-------------------------------------------------
+  メニュー
+-------------------------------------------------*/
+
+.menu {
+    margin: 30px auto;
+    padding: 0;
+
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+
+/*-------------------------------------------------
+  フッター
+-------------------------------------------------*/
+
+footer {
+    margin: 60px auto 30px;
+
+    padding-top: 15px;
+
+    border-top: 3px double #69c5c5;
+
+    text-align: center;
+}
+
+
+/*-------------------------------------------------
+  アニメーション
+-------------------------------------------------*/
+
+@keyframes FadeIn {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/*-------------------------------------------------
+  768px以上
+-------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+
+    /* ヘッダー */
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    header h1 {
+        margin: 0;
+        margin-left: auto;
+    }
+
+
+    /* 補足情報 */
+
+    header aside {
+        flex-basis: 400px;
+        margin-left: 80px;
+        margin-right: auto;
+        text-align: justify;
+        word-break: break-all;
+    }
+
+    main {
+        max-width: 800px;
+    }
+
+
+    section h2 {
+        font-size: 24px;
+    }
+
+
+    .character {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+/*-------------------------------------------------
+  1024px以上
+-------------------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        max-width: 1000px;
+    }
+
+}
