@@ -167,11 +167,20 @@ a:hover {
   float: right;
   width: 870px;
   line-height: 20px;
+  
 }
 
-#leftcolumn-inner,
-#rightcolumn-inner {
+#leftcolumn-inner
+{
   margin: 10px;
+  
+ 
+}
+#rightcolumn-inner {
+  margin: 10px ;
+ 
+  
+ 
 }
 
 footer {
