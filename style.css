@@ -815,3 +815,8 @@ hr {
     transform: rotate(-135deg);
   }
 }
+
+/*footer*/
+footer {
+    clear: both;
+}
