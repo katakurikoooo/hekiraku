@@ -1,3 +1,51 @@
+/* タグ共通 */
+.tag {
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    margin: 0.1em 0;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+
+/* 地域タグ */
+.tag-region {
+    background-color: #D3E5EF;
+}
+
+/* 物語タグ */
+.tag-story {
+    background-color: #EBF6F7;
+}
+
+/* 特殊属性タグ */
+.tag-special {
+    background-color: #E3E2E0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ブラウン　背景#EEE0DA
+オレンジ　背景#FADEC9
+黄色背景#FDECC8
+緑　背景#DBEDDB
+青　背景#D3E5EF
+紫　背景#E8DEEE
+
+赤　背景#ffe2dd
+
+
+
 タグ
 赤
 オレンジ

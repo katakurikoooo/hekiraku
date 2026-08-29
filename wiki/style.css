@@ -493,6 +493,19 @@ img {
   color: #666;
 }
 
+#main table th,
+#main table td {
+  
+        text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#main table td:last-child {
+    text-align: left;
+    white-space: normal;
+}
+
 #wiki th {
   border: solid 1px #cccccc; /* 枠線指定 */
   padding: 7px; /* 余白指定 */
@@ -754,4 +767,48 @@ img {
 
 html {
     scroll-behavior: smooth;
+}
+
+/* タグ共通 */
+.tag {
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    margin: 0.1em 0;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+
+/* 地域タグ */
+.tag-region {
+    background-color: #FDECC8;
+}
+
+/* 地域タグ */
+.tag-region-kanto {
+    background-color: #FFE2DD;
+}
+
+.tag-region-johto {
+    background-color: #FADEC9;
+}
+
+.tag-region-hoenn {
+    background-color: #DBEDDB;
+}
+
+.tag-region-sinnoh {
+    background-color: #D3E5EF;
+}
+
+.tag-region-nanashima {
+    background-color: #F1F0EF;
+}
+/* 物語タグ */
+.tag-story {
+    background-color: #EBF6F7;
+}
+
+/* 特殊属性タグ */
+.tag-special {
+    background-color: #E3E2E0;
 }
