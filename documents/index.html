@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Document Index</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            if (sessionStorage.getItem("sss_repo_auth_id")) {
+                document.documentElement.classList.add("is-repo-unlocked");
+            }
+        } catch (e) {}
+    </script>
+</head>
+<body>
+<style>
+    /* 権限認証オーバーレイ */
+    html.is-repo-unlocked #auth-gate,
+    #auth-gate.is-unlocked {
+        display: none !important;
+    }
+/* 編集時はここをオンにする
+#auth-gate {
+    display: none;
+} */
+
+    #auth-gate {
+        position: fixed;
+        inset: 0;
+        background-color: #0e0e0e;
+        color: #e6e6e6;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    }
+
+    .auth-box {
+        width: 100%;
+        max-width: 420px;
+        border: 1px solid #333333;
+        padding: 36px 28px;
+        background-color: #121212;
+        text-align: left;
+    }
+
+    .auth-status {
+        font-family: monospace, sans-serif;
+        font-size: 0.78rem;
+        color: #888888;
+        letter-spacing: 0.08em;
+        margin-bottom: 14px;
+    }
+
+    .auth-title {
+        font-size: 1.15rem;
+        font-weight: normal;
+        color: #ffffff;
+        letter-spacing: 0.08em;
+        margin-bottom: 12px;
+    }
+
+    .auth-desc {
+        font-size: 0.88rem;
+        color: #b0b0b0;
+        line-height: 1.8;
+        margin-bottom: 24px;
+    }
+
+    .auth-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .auth-input {
+        width: 100%;
+        padding: 11px 14px;
+        background-color: #0b0b0b;
+        border: 1px solid #444444;
+        color: #ffffff;
+        font-family: monospace, sans-serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+        outline: none;
+    }
+
+    .auth-input:focus {
+        border-color: #d4d4d4;
+    }
+
+    .auth-btn {
+        padding: 11px 16px;
+        background-color: transparent;
+        border: 1px solid #d4d4d4;
+        color: #ffffff;
+        font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        font-size: 0.88rem;
+        letter-spacing: 0.12em;
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .auth-btn:hover {
+        background-color: #e6e6e6;
+        color: #0e0e0e;
+    }
+
+    .auth-feedback {
+        margin-top: 14px;
+        min-height: 1.4em;
+        font-family: monospace, sans-serif;
+        font-size: 0.8rem;
+        color: #cccccc;
+        letter-spacing: 0.05em;
+    }
+</style>
+
+<div id="auth-gate" aria-modal="true" role="dialog">
+    <div class="auth-box">
+        <p class="auth-status">SECURITY CHECK // CLEARANCE REQUIRED</p>
+        <h2 class="auth-title">権限IDを入力してください</h2>
+        <p class="auth-desc">
+            記録保管庫へアクセスするには識別コードが必要です。<br>
+            権限IDを入力して照合を実行してください。
+        </p>
+        <form id="auth-form" class="auth-form">
+            <input
+                type="text"
+                id="auth-id-input"
+                class="auth-input"
+                placeholder="権限ID"
+                autocomplete="off"
+                aria-label="権限ID"
+            >
+            <button type="submit" class="auth-btn">閲覧する</button>
+        </form>
+        <p id="auth-feedback" class="auth-feedback"></p>
+    </div>
+</div>
+
+<header>
+    <h1><span>記録保管庫</span></h1>
+    <aside>
+        <p>回収された記録文書・私信の断片。<br>※本アーカイブ内の記録は、一部閲覧制限および検閲済みの状態で保存されています。</p>
+    </aside>
+</header>
+
+<main>
+    <section>
+        <h2>N.O.A.H</h2>
+        <p class="category-note">STATUS: FROZEN ―― 計画凍結時アーカイブ</p>
+        <ul>
+            <li><a href="files/noah_01.html">プロジェクト・ノア（N.O.A.H.）基本綱領</a></li>
+            <li><a href="files/noah_02.html">「プロジェクト・ノア」凍結措置および保管資料監査報告</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>SEIZED</h2>
+        <p class="category-note">STATUS: ARCHIVED ―― 押収資料目録</p>
+        <ul>
+            <li><a href="files/seized_01.html">ロッジ管理者心得</a></li>
+            <li><a href="files/seized_02.html">回収された端末に保存されていた謎の記号列</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>CONFIDENTIAL</h2>
+        <p class="category-note">STATUS: RESTRICTED ―― 閲覧には権限が必要です</p>
+        <ul>
+            <li><a href="files/conf_01.html">ネバーランド掃討作戦に関する告示</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>PERSONAL</h2>
+        <p class="category-note">STATUS: UNCLASSIFIED ―― 未分類・私信断片</p>
+        <ul>
+            <li><a href="files/personal_01.html">ある研究員の手紙</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <a href="../shelf.html">back</a><br>
+    [Template] <a href="https://ninawas.me" target="_blank">NINA</a>
+</footer>
+
+<script>
+(function () {
+    const STORAGE_KEY = "sss_repo_auth_id";
+    const gate = document.getElementById("auth-gate");
+    const form = document.getElementById("auth-form");
+    const input = document.getElementById("auth-id-input");
+    const feedback = document.getElementById("auth-feedback");
+
+    if (!gate || !form) return;
+
+    function unlockGate() {
+        gate.classList.add("is-unlocked");
+        gate.style.display = "none";
+    }
+
+    try {
+        if (sessionStorage.getItem(STORAGE_KEY)) {
+            unlockGate();
+            return;
+        }
+    } catch (e) {}
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const raw = input ? input.value.trim() : "";
+        const idLabel = raw || "GUEST";
+
+        try {
+            sessionStorage.setItem(STORAGE_KEY, idLabel);
+        } catch (e) {}
+
+        if (feedback) {
+            feedback.textContent = "ACCESS GRANTED : [" + idLabel + "] を確認しました。";
+        }
+
+        setTimeout(unlockGate, 350);
+    });
+})();
+</script>
+</body>
+</html>

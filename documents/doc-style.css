@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0e0e0e; /* 深めの黒 */
+    color: #e6e6e6;            /* 目に優しい白 */
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    line-height: 2.0;          /* 行間を広めにして記録文書らしい余白に */
+    letter-spacing: 0.05em;
+    padding: 60px 24px;
+}
+
+.document-wrapper {
+    max-width: 680px;          /* 1行が長くなりすぎない読みやすい幅 */
+    margin: 0 auto;
+}
+
+/* タイトルと組織情報 */
+.doc-header {
+    margin-bottom: 16px;
+}
+
+.doc-title {
+    font-size: 1.35rem;
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+}
+
+.doc-meta {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #999999;            /* 組織・資料種類は少し控えめなグレー */
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+/* 白い区切り線 */
+.doc-divider {
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    margin: 20px 0 40px 0;
+}
+
+/* 本文エリア */
+.doc-body p {
+    margin-bottom: 1.6em;
+    text-align: justify;
+}
+
+/* 箇条書きや三段階などの強調用 */
+.doc-body .sub-heading {
+    margin-top: 2em;
+    margin-bottom: 0.4em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* 戻るリンク */
+.doc-footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.85rem;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+.doc-footer a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.doc-footer a:hover {
+    color: #ffffff;
+}
+
+/* スマホ表示の微調整 */
+@media (max-width: 600px) {
+    body {
+        padding: 40px 20px;
+    }
+    .doc-title {
+        font-size: 1.15rem;
+    }
+}
